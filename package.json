@@ -1,0 +1,49 @@
+{
+  "name": "@robb_j/md-toc",
+  "version": "0.1.0",
+  "description": "A CLI to generate a markdown table of contents & insert it in",
+  "main": "src/index.js",
+  "bin": "src/cli.js",
+  "scripts": {
+    "lint": "eslint src",
+    "postversion": "node tools/buildAndPush.js",
+    "prettier": "prettier --write ./**/*.{js,json,css,md}",
+    "start": "node src",
+    "watch": "nodemon src --watch src"
+  },
+  "author": "Rob Anderson (https://r0b.io)",
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,less,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js}": [
+      "eslint",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "casex": "^3.0.0",
+    "commander": "^2.19.0"
+  },
+  "devDependencies": {
+    "acorn": "^6.0.4",
+    "eslint": "^5.10.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.2.0",
+    "lint-staged": "^8.1.0",
+    "nodemon": "^1.18.7",
+    "prettier": "^1.15.3"
+  }
+}
