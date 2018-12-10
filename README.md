@@ -17,27 +17,27 @@ Quickly generate a table of contents from a markdown file and optionally insert 
 
 ```bash
 # Install on a project as a dev dependancy
-npm i -D @robb_j/md-toc
+npm i -D gen-md-toc
 ```
 
 ### Example use
 
 ```bash
 # Output a table of contents for a README.md in the current directory
-npx md-toc
+npx gen-md-toc
 
 # Insert a table of contents in the local README.md
 # -> Replaces inbetween <!-- toc-head --> and <!-- toc-tail -->
-npx md-toc -i
+npx gen-md-toc -i
 
 # Output a table of contents for a different file
-npx md-toc -f CONTRIBUTING.md
+npx gen-md-toc -f CONTRIBUTING.md
 ```
 
 ### Full usage info
 
 ```
-Usage: md-toc [options]
+Usage: gen-md-toc [options]
 
 A tool for generating a table of contents for readmes
 
@@ -59,7 +59,7 @@ You can use this programmatically in node by importing the module,
 see [cli.js](/src/cli.js) for detailed usage.
 
 ```js
-const { tableOfContents, headTag, tailTag } = require('@robb_j/md-toc')
+const { tableOfContents, headTag, tailTag } = require('gen-md-toc')
 
 // filename: string
 // inline: boolean
