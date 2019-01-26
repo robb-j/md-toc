@@ -8,7 +8,6 @@ Quickly generate a table of contents from a markdown file and optionally insert 
   - [Installation](#installation)
   - [Example use](#example-use)
   - [Full usage info](#full-usage-info)
-- [Dependancies](#dependancies)
 - [API](#api)
 
 ## Usage
@@ -22,7 +21,7 @@ npm i -D @robb_j/md-toc
 
 ### Example use
 
-> You can only use `npx md-toc` when a project dependancy
+> You can only use `npx md-toc` when added as a project dependancy
 
 ```bash
 # Output a table of contents for a README.md in the current directory
@@ -49,11 +48,6 @@ Options:
   -i --inline [false]    whether to edit the table of contents inline, it replaces for '<!-- toc-head -->' and <!-- toc-tail --> (default: false)
   -h, --help             output usage information
 ```
-
-## Dependancies
-
-This module only has 2 dependancies, [casex](https://npm.im/casex) & [commander](https://npm.im/commander),
-as of writing neither of which have any nested dependancies.
 
 ## API
 
