@@ -6,7 +6,6 @@
   "bin": "src/cli.js",
   "scripts": {
     "lint": "eslint src",
-    "postversion": "node tools/buildAndPush.js",
     "prettier": "prettier --write ./**/*.{js,json,css,md}",
     "start": "node src",
     "watch": "nodemon src --watch src"
