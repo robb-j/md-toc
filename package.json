@@ -10,8 +10,15 @@
     "start": "node src",
     "watch": "nodemon src --watch src"
   },
+  "keywords": [
+    "cli",
+    "markdown",
+    "table-of-contents",
+    "toc"
+  ],
   "author": "Rob Anderson (https://r0b.io)",
-  "license": "ISC",
+  "repository": "robb-j/md-toc",
+  "license": "MIT",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
