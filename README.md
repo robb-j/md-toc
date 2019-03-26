@@ -65,3 +65,15 @@ const { tableOfContents, headTag, tailTag } = require('@robb_j/md-toc')
 // inline: boolean
 tableOfContents(filename, inline)
 ```
+
+### Development
+
+```bash
+# Run the cli when you have the repo checked out
+# NOTE: Make sure not to process this readme as it has toc-head/tail comments in for documentation only
+node src/cli.js # ...
+```
+
+---
+
+> This repo was set up with [robb-j/node-base](https://github.com/robb-j/node-base)
