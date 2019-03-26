@@ -4,7 +4,12 @@ const { join } = require('path')
 const headTag = `<!-- toc-head -->`
 const tailTag = `<!-- toc-tail -->`
 
-const slugify = s => encodeURIComponent(s.toLowerCase().replace(/\s+/g, '-'))
+function handlify(value) {
+  return value
+    .toLowerCase()
+    .replace(/\s+/g, '-')
+    .replace(/[^\w-]+/g, '')
+}
 
 function tableOfContents(file, inline = false) {
   try {
@@ -28,7 +33,7 @@ function tableOfContents(file, inline = false) {
         headings.push({
           title,
           level: hashes.length,
-          handle: slugify(title)
+          handle: handlify(title)
         })
       }
 
