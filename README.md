@@ -36,6 +36,9 @@ npx @robb_j/md-toc -f CONTRIBUTING.md
 
 # Use a glob to process multiple files
 npx @robb_j/md-toc -f "**/*.md"
+
+# Test a glob to see what it matches
+npx @robb_j/md-toc -f "**/*.md" --dry-run
 ```
 
 ### Full usage info
