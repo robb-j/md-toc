@@ -29,7 +29,7 @@ function tableOfContents(file, inline = false) {
       title = title.trim()
 
       // Only process if not our own title
-      if (title !== 'Table of Contents') {
+      if (title !== 'Table of contents') {
         headings.push({
           title,
           level: hashes.length,
@@ -42,7 +42,9 @@ function tableOfContents(file, inline = false) {
     }
 
     // Go through each heading and create a list item with a link in it
-    const outputLines = ['## Table of Contents', '']
+    // If doing an inline replace, add a title too
+    const outputLines = inline ? ['## Table of contents', ''] : []
+
     headings.forEach(({ title, handle, level }) => {
       let item = ''
       while (item.length / 2 < level - 2) item += '  '
@@ -69,11 +71,11 @@ function tableOfContents(file, inline = false) {
       fs.writeFileSync(path, toWrite)
     } else {
       // If not in inline mode, just output the result
-      console.log(`\n${output}\n`)
+      console.log(output)
     }
   } catch (error) {
     console.log(error)
   }
 }
 
-module.exports = { tableOfContents, headTag, tailTag }
+module.exports = { handlify, tableOfContents, headTag, tailTag }

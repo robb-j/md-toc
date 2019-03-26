@@ -21,7 +21,7 @@ npm i -D @robb_j/md-toc
 
 ### Example use
 
-> You can only use `npx md-toc` when added as a project dependancy
+> You can use `npx md-toc` when added as a project dependancy
 
 ```bash
 # Output a table of contents for a README.md in the current directory
@@ -33,6 +33,9 @@ npx @robb_j/md-toc -i
 
 # Output a table of contents for a different file
 npx @robb_j/md-toc -f CONTRIBUTING.md
+
+# Use a glob to process multiple files
+npx @robb_j/md-toc -f "**/*.md"
 ```
 
 ### Full usage info
@@ -44,8 +47,9 @@ A tool for generating a table of contents for readmes
 
 Options:
   -V, --version          output the version number
-  -f --file [README.md]  specify where the readme file you want to use is (default: "README.md")
-  -i --inline [false]    whether to edit the table of contents inline, it replaces for '<!-- toc-head -->' and <!-- toc-tail --> (default: false)
+  -f --file [README.md]  specify where the markdown file(s) you want to process are, accepts a filename or a glob (default: "README.md")
+  -i --inline [false]    edit the table of contents inline, it replaces between '<!-- toc-head -->' and <!-- toc-tail --> (default: false)
+  --dry-run [false]      perform a dry run, useful for testing your glob
   -h, --help             output usage information
 ```
 
