@@ -77,6 +77,10 @@ tableOfContents(filename, inline)
 node src/cli.js # ...
 ```
 
+## Future work
+
+- Take file pattern as an argument rather than an option, i.e. `md-toc <...pattern>`, perhaps as a varadic argument
+
 ---
 
 > This repo was set up with [robb-j/node-base](https://github.com/robb-j/node-base)
