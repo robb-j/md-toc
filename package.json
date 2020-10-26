@@ -1,6 +1,6 @@
 {
   "name": "@robb_j/md-toc",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A CLI to generate a markdown table of contents & insert it in",
   "main": "src/index.js",
   "bin": "src/cli.js",
